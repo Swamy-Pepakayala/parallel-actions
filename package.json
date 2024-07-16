@@ -7,7 +7,7 @@
     "start": "node index.js",
     "build": "your-build-command-here",
     "test": "jest"
-    // Add other scripts as needed, e.g., "lint": "eslint ."
+    
   },
   "keywords": [
     "keyword1",
@@ -19,24 +19,24 @@
   "dependencies": {
     "express": "^4.17.1",
     "axios": "^0.24.0"
-    // Add other production dependencies here
+
   },
   "devDependencies": {
     "jest": "^27.5.1",
     "eslint": "^8.7.0"
-    // Add other development dependencies here
+    
   },
   "engines": {
     "node": ">=12.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Swamy-Pepakayala.git"
+    "url": "https://github.com/Swamy-Pepakayala/parallel-actions.git"
   },
   "bugs": {
-    "url": "https://github.com/Swamy-Pepakayala.git/issues"
+    "url": "https://github.com/Swamy-Pepakayala/parallel-actions/issues"
   },
-  "homepage": "https://github.com/Swamy-Pepakayala.git#readme",
+  "homepage": "https://github.com/Swamy-Pepakayala/parallel-actions#readme",
   "private": false,
   "contributors": [
     {
