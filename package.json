@@ -1,23 +1,51 @@
 {
-  "name": "my-node-app",
+  "name": "your-project",
   "version": "1.0.0",
-  "description": "A sample Node.js application",
+  "description": "Description of your project",
   "main": "index.js",
   "scripts": {
-     "test": "echo \"Error: no test specified\""
+    "start": "node index.js",
+    "build": "your-build-command-here",
+    "test": "jest"
+    // Add other scripts as needed, e.g., "lint": "eslint ."
   },
   "keywords": [
-    "node",
-    "sample",
-    "example"
+    "keyword1",
+    "keyword2",
+    "keyword3"
   ],
   "author": "Your Name",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "axios": "^0.24.0"
+    // Add other production dependencies here
   },
   "devDependencies": {
-    "mocha": "^9.1.3",
-    "chai": "^4.3.4"
-  }
+    "jest": "^27.5.1",
+    "eslint": "^8.7.0"
+    // Add other development dependencies here
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Swamy-Pepakayala/parallel-actions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Swamy-Pepakayala/parallel-actions.git/issues"
+  },
+  "homepage": "https://github.com/Swamy-Pepakayala/parallel-actions.git#readme",
+  "private": false,
+  "contributors": [
+    {
+      "name": "Contributor 1",
+      "email": "contributor1@example.com"
+    },
+    {
+      "name": "Contributor 2",
+      "email": "contributor2@example.com"
+    }
+  ]
 }
