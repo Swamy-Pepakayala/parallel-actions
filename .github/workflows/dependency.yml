@@ -3,7 +3,7 @@ name: Parallel Actions Example
 on:
   push:
     branches:
-      - dev  # Replace with your branch name if different
+      - dev 
 
 jobs:
   build:
@@ -15,8 +15,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      # - name: Build application
-      #   run: npm build
+      - name: Build application
+        run: npm build
 
   test:
     runs-on: ubuntu-latest
