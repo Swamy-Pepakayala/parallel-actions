@@ -1,92 +1,33 @@
-# name: CI
-
-# on: [push]
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-#       - name: Build application
-#         run: |
-#           npm install
-#           npm run build
-#           uses: ./.github/workflows/package.json
-
-#   test:
-#     runs-on: ubuntu-latest
-#     needs: build  # waits for the 'build' job to complete
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-#       - name: Run tests
-#         run: npm test
-
-#   deploy:
-#     runs-on: ubuntu-latest
-#     needs: [build, test]  # waits for both 'build' and 'test' jobs to complete
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-#       - name: Deploy to production
-#         run: |
-#           echo "Deploying..."
-
-name: CI
-
-on:
-  push:
+name: GitHub Actions Parallel Run
+'on':
+  workflow_dispatch: null
+  pull_request:
     branches:
       - dev
-
 jobs:
-  build:
+  Test1:
+    timeout-minutes: 120
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build application
-        run: npm run build  # Replace with your actual build command
-
-      - name: Run tests
-        run: npm test
-
-      - name: Deploy to production
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          echo "Deploying..."
-          # Add your deployment commands here
-
-  lint:
+      - name: Test1
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run google
+          browser: chrome
+          headless: true
+          record: false
+  Test2:
+    timeout-minutes: 120
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install --only=dev
-
-      - name: Linting with ESLint
-        run: npm run lint  # Replace with your actual linting command
-
-  publish:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Publish to npm registry
-        if: github.event_name == 'release'
-        run: |
-          npm publish --access public
-          # Add any additional publish steps here
-
-
+      - name: Test1
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run amazon
+          browser: chrome
+          headless: true
+          record: false
