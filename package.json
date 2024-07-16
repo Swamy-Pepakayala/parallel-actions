@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Swamy-Pepakayala/parallel-actions.git"
+    "url": "https://github.com/Swamy-Pepakayala.git"
   },
   "bugs": {
-    "url": "https://github.com/Swamy-Pepakayala/parallel-actions.git/issues"
+    "url": "https://github.com/Swamy-Pepakayala.git/issues"
   },
-  "homepage": "https://github.com/Swamy-Pepakayala/parallel-actions.git#readme",
+  "homepage": "https://github.com/Swamy-Pepakayala.git#readme",
   "private": false,
   "contributors": [
     {
