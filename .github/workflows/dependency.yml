@@ -33,7 +33,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [build, test]  # Wait for both 'build' and 'test' jobs to complete
+    needs: test  # Wait for 'test' jobs to complete
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
